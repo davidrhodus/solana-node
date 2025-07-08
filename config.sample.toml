@@ -1,0 +1,51 @@
+# Solana Node Configuration
+
+# Storage path for transaction data
+storage_path = "./solana_node_data"
+
+[network]
+# RPC endpoints for fetching transaction details
+# You can add multiple endpoints for redundancy
+rpc_endpoints = [
+    "https://api.mainnet-beta.solana.com",
+    # Add more endpoints here
+]
+
+# WebSocket endpoints for real-time transaction streaming
+websocket_endpoints = [
+    "wss://api.mainnet-beta.solana.com",
+    # Add more endpoints here
+]
+
+# Gossip entrypoints for peer discovery (optional for transaction collection)
+gossip_entrypoints = [
+    "entrypoint.mainnet-beta.solana.com:8001",
+]
+
+# Maximum number of concurrent connections
+max_connections = 100
+
+[node]
+# Path to identity keypair (optional)
+# identity_keypair_path = "/path/to/keypair.json"
+
+# Port to listen on for metrics/API (future feature)
+listen_port = 8899
+
+# Maximum number of transactions to process in a batch
+max_transaction_batch_size = 1000
+
+# How many days to retain transaction data (0 = forever)
+storage_retention_days = 30
+
+# Configuration for different networks:
+# 
+# For Devnet:
+# rpc_endpoints = ["https://api.devnet.solana.com"]
+# websocket_endpoints = ["wss://api.devnet.solana.com"]
+# gossip_entrypoints = ["entrypoint.devnet.solana.com:8001"]
+#
+# For Testnet:
+# rpc_endpoints = ["https://api.testnet.solana.com"]
+# websocket_endpoints = ["wss://api.testnet.solana.com"]
+# gossip_entrypoints = ["entrypoint.testnet.solana.com:8001"] 

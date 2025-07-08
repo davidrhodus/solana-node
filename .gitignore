@@ -1,0 +1,24 @@
+# Rust build artifacts
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node data directories
+/solana_node_data/
+/solana_node_data_*/
+
+# Config file (may contain sensitive data)
+config.toml
+
+# Logs
+*.log

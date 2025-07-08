@@ -1,0 +1,33 @@
+# Solana Node Configuration - Devnet
+
+# Storage path for transaction data
+storage_path = "./solana_node_data_devnet"
+
+[network]
+# RPC endpoints for fetching transaction details
+rpc_endpoints = [
+    "https://api.devnet.solana.com",
+]
+
+# WebSocket endpoints for real-time transaction streaming
+websocket_endpoints = [
+    "wss://api.devnet.solana.com",
+]
+
+# Gossip entrypoints for peer discovery
+gossip_entrypoints = [
+    "entrypoint.devnet.solana.com:8001",
+]
+
+# Maximum number of concurrent connections
+max_connections = 10
+
+[node]
+# Port to listen on for metrics/API
+listen_port = 8899
+
+# Maximum number of transactions to process in a batch
+max_transaction_batch_size = 100
+
+# How many days to retain transaction data (0 = forever)
+storage_retention_days = 7 
